@@ -119,7 +119,9 @@ const Dashboard = () => {
 
   //initial listing
   useEffect(() => {
-    getEmployeesById();
+    if (data?.length !== 0) {
+      getEmployeesById();
+    }
   }, []);
 
   //Table Data initialization
